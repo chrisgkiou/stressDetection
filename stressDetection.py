@@ -22,7 +22,7 @@ df.isnull().sum()
 nltk.download('stopwords')
 stemmer = nltk.SnowballStemmer("english")
 stopword=set(stopwords.words('english'))
-def clean(text):                                       # function for cleaning the text column
+def clean(text):                                       # function for cleaning the text colummmn
     text = str(text).lower()
     text = re.sub('\[.*?\]', '', text)
     text = re.sub('https?://\S+|www\.\S+', '', text)
