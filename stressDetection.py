@@ -20,7 +20,7 @@ df.isnull().sum()
 
 
 nltk.download('stopwords')
-stemmer = nltk.SnowballStemmer("english")  # snowball stemmer is Porter stemmer v2 
+stemmer = nltk.SnowballStemmer("english")
 stopword=set(stopwords.words('english'))
 def clean(text):                                       # function for cleaning the text column
     text = str(text).lower()
@@ -70,7 +70,8 @@ MN = MultinomialNB()
 MN.fit(xtrain,ytrain)
 print(classification_report(ytest,MN.predict(xtest)))
 
-user = input("Text: I am sad")
+user = input("Text: I am sad because my team lost last night")
 data = cv.transform([user]).toarray()
 output = model.predict(data)
 print(output)
+
