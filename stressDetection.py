@@ -20,7 +20,7 @@ df.isnull().sum()
 
 
 nltk.download('stopwords')
-stemmer = nltk.SnowballStemmer("english")  # snowball stemmer is Porter stemmer v2 
+stemmer = nltk.SnowballStemmer("english")  # snowball stemmer is Porter stemmer v2 hello
 stopword=set(stopwords.words('english'))
 def clean(text):                                       # function for cleaning the text column
     text = str(text).lower()
